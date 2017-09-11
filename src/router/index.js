@@ -2,9 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Frontapp from '@/components/front/'
 
-import Maps from '@/components/front/maps/'
 import Home from '@/components/front/Home'
-
+import Notas from '@/components/front/Notas'
+import Agenda from '@/components/front/Agenda'
+import Centros from '@/components/front/Centros'
+import Talleres from '@/components/front/Talleres'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
 Vue.use(VueGoogleMaps, {
@@ -31,9 +33,24 @@ export default new Router({
           component: Home
         },
         {
+          path: 'notas',
+          name: 'notas',
+          component: Notas
+        },
+        {
           path: 'agenda',
           name: 'agenda',
-          component: Maps
+          component: Agenda
+        },
+        {
+          path: 'centros',
+          name: 'centros',
+          component: Centros
+        },
+        {
+          path: 'talleres',
+          name: 'talleres',
+          component: Talleres
         }
       ]
     }

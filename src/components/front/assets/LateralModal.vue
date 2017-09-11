@@ -4,7 +4,7 @@
 <div class="modal-content">
 <div class="col-md-12" id="bmodal">
 <div class="col-md-7">
-<img class="img-responsive mo" src="static/imagenes/concierto.jpg" alt="">
+<img class="img-responsive mo" :src="modalImage(event.img)" alt="">
 </div>
 <div class="col-md-5 texm_m_e">
 <h3 class="azul le titulos ti">{{event.title}}</h3>
@@ -45,6 +45,9 @@
     methods: {
       closeModal () {
         this.$emit('closeModal', this.cModal)
+      },
+      modalImage (img) {
+        return 'static/imagenes/' + img
       }
     }
   }

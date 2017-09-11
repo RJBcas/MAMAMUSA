@@ -1,17 +1,31 @@
 <template>
+
   <div class="Home">
-   <div class="video-wallpaper">
-        <video id="vidfon" autoplay loop playsinline muted poster="static/video/img/wppost.jpg"  >
-             <source src="static/video/Portada_Mamamusa.mp4" type="video/mp4">
-        </video>
-      </div>
+  <lateralBar></lateralBar>
+  <videoFondo></videoFondo>
+  <publicidadFuter></publicidadFuter>
   </div>
+
 </template>
 <script>
+  
+  import LateralBar from './assets/Lateralbar'
+  import Footer from './assets/Footer'
+  import VideoFondo from './assets/VideoFondo'
+  export default{
+    components: {
+      lateralBar: LateralBar,
+      publicidadFuter: Footer,
+      videoFondo: VideoFondo
+    }
+  }
 </script>
 <style scoped>
  .Home{
   background: black;
  }
- 
+ .fondo-im{
+  position: absolute;
+  display: block;
+ }
 </style>
